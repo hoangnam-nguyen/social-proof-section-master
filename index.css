@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary-magenta: hsl(300, 43%, 22%);
+    --clr-primary-pink: hsl(333, 80%, 67%);
+    --clr-neutral-dark: hsl(303, 10%, 53%);
+    --clr-neutral-light: hsl(300, 24%, 96%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+    --fs-large: 2.5rem;
+    --fs-small: 0.9375rem;
+
+    --ff: 'Spartan', sans-serif;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+}
+
+@media only screen and (min-width: 56.25rem) {
+    :root {
+        --fs-small: .75rem
+    }
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+        url(images/bg-pattern-top-mobile.svg) left top no-repeat,
+        url(images/bg-pattern-bottom-mobile.svg) right bottom no-repeat;
+    background-size: auto, auto;
+    background-color: var(--clr-neutral-white);
+}
+
+main {
+    text-align: center;
+    font-family: var(--ff);
+    font-size: var(--fs-small);
+    padding: 5rem 1.5rem;
+    width: clamp(30rem, 1rem, 80rem);
+    height: fit-content;
+}
+
+.info,
+.rating {
+    margin-bottom: 2.5rem;
+}
+
+.info h1 {
+    font-size: var(--fs-large);
+    font-weight: var(--fw-700);
+    color: var(--clr-primary-magenta);
+
+}
+
+.info p {
+    font-weight: var(--fw-400);
+    color: var(--clr-neutral-dark);
+}
+
+.rate-box {
+    padding: 1rem 0 1rem 0;
+    margin: 1rem 0;
+    background-color: var(--clr-neutral-light);
+    border-radius: 1rem;
+}
+
+.rate-box p {
+    font-weight: var(--fw-700);
+    color: var(--clr-primary-magenta);
+}
+
+.stars {
+    margin-bottom: .5rem;
+}
+
+.feedback {
+    background-color: var(--clr-primary-magenta);
+    color: var(--clr-neutral-white);    
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem 2rem;
+    line-height: 1.5rem;
+}
+
+.feedback span {
+    color: var(--clr-primary-pink);
+    font-weight: var(--fw-400);
+}
+
+.profile {
+    position: relative;
+    text-align: left;
+    padding-left: 4.5rem;
+    padding-bottom: 2rem;
+    font-weight: var(--fw-700);
+}
+
+.profile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.content {
+    text-align: left;
+    font-weight: var(--fw-400);
+}
+
+@media only screen and (min-width: 56.25rem) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    main {
+        position: relative;
+        width: 75vw;
+        height: 82vh;
+        text-align: left;
+    }
+    
+    .info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: clamp(24rem, 5rem, 30rem);
+    }
+
+    .info p {
+        line-height: 1.5rem;
+        font-weight: var(--fw-500);
+    }
+
+    .rating {
+        position: absolute;
+        top: .5rem;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .rate-box {
+        display: inline-flex;
+        align-items: center;
+        width: 30vw;
+        padding: .8rem 0 .8rem 1.5rem;
+        margin: .5rem 0;
+        background-color: var(--clr-neutral-light);
+        border-radius: .5rem;
+    }
+
+    .indent-1 {
+        margin-left: 3.5vw;
+    }
+
+    .indent-2 {
+        margin-left: 7vw;
+    }
+
+    .stars {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+    
+    .feedback-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .feedback {
+        height: 13rem;
+        width: 20rem;
+        background-color: var(--clr-primary-magenta);
+        color: var(--clr-neutral-white);    
+        border-radius: .5rem;
+        line-height: 1.5rem;
+        padding: 1.5rem 1.5rem;
+    }
+
+    .profile {
+        padding-bottom: 1rem;
+    }
+    
+    .align-1 {
+        margin-top: 1rem;
+        margin-left: .3rem;
+    }
+
+    .align-2 {
+        margin-top: 2rem;
+        margin-left: .3rem;
+    }
+    
+}
